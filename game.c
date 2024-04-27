@@ -47,7 +47,7 @@ int isBoardHaveWinner(int b04rdG4m3[3][3], int playerType){
 }
 
 int main(){
-    key_t keyMsg = ftok("progfile", 1337);
+    key_t keyMsg = ftok("game.c", 1337);
     
     int b04rdG4m3[3][3] = {{-1,-1,-1}, {-1,-1,-1}, {-1,-1,-1}}; 
 

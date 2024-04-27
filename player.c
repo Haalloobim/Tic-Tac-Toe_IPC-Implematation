@@ -63,7 +63,7 @@ void GameStartedBanner( char pl4yerTyp3 ){
 }
 
 int main(){
-    key_t key = 1333337, keyMsg = ftok("progfile", 1337);
+    key_t key = 1333337, keyMsg = ftok("game.c", 1337);
     
     int sharedMemId = shmget(key, sizeof(WillBeShared), IPC_CREAT | 0776), flag = 0, pl4yerTyp3 = -1;
     
