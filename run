@@ -1,0 +1,13 @@
+#!/bin/bash
+
+count=$#
+
+if [ $count -eq 1 ]; then
+    file=$1
+    gcc "$file".c -o "$file" && ./"$file"
+elif [ $count -eq 2 ] && [ "$1" = "thread" ]; then
+    file=$2
+    gcc -pthread "$file".c -o "$file" && ./"$file"
+else
+    echo "Usage: ./run <filename>"
+fi
